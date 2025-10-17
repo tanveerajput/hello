@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/TicTacToe.dir/link.d CMakeFiles/TicTacToe.dir/main.cpp.o CMakeFiles/TicTacToe.dir/Game.cpp.o CMakeFiles/TicTacToe.dir/Board.cpp.o CMakeFiles/TicTacToe.dir/Player.cpp.o -o bin/TicTacToe
