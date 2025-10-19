@@ -24,9 +24,9 @@ class TicTacToeUI {
     }
 
     async waitForWasm() {
-        // Wait for the WebAssembly module to load
+        // Wait for the module to load (WebAssembly or JavaScript fallback)
         const checkModule = () => {
-            if (typeof Module !== 'undefined' && Module._makeMove) {
+            if (typeof Module !== 'undefined' && Module.ccall) {
                 this.wasmModule = Module;
                 this.onWasmReady();
             } else {
@@ -37,7 +37,7 @@ class TicTacToeUI {
     }
 
     onWasmReady() {
-        console.log('WebAssembly module loaded successfully!');
+        console.log('Game engine loaded successfully!');
         this.isLoading = false;
         
         // Hide loading, show tech info
