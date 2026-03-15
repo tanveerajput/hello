@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - C++ WebAssembly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Tic Tac Toe</h1>
+            <p class="subtitle">Powered by C++ & WebAssembly</p>
+        </header>
+
+        <main class="game-container">
+            <div class="game-info">
+                <div class="current-player">
+                    <span id="current-player-label">Current Player:</span>
+                    <span id="current-player" class="player-x">X</span>
+                </div>
+                <div class="game-status">
+                    <span id="game-status">Make your move!</span>
+                </div>
+            </div>
+
+            <div class="game-board" id="game-board">
+                <div class="cell" data-row="0" data-col="0"></div>
+                <div class="cell" data-row="0" data-col="1"></div>
+                <div class="cell" data-row="0" data-col="2"></div>
+                <div class="cell" data-row="1" data-col="0"></div>
+                <div class="cell" data-row="1" data-col="1"></div>
+                <div class="cell" data-row="1" data-col="2"></div>
+                <div class="cell" data-row="2" data-col="0"></div>
+                <div class="cell" data-row="2" data-col="1"></div>
+                <div class="cell" data-row="2" data-col="2"></div>
+            </div>
+
+            <div class="controls">
+                <button id="reset-button" class="btn btn-primary">🔄 New Game</button>
+            </div>
+        </main>
+
+        <footer>
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Loading game engine...</p>
+            </div>
+            <div class="tech-info" id="tech-info" style="display: none;">
+                <p>Game logic implemented in JavaScript (C++ WebAssembly version available with Emscripten)</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="tictactoe-fallback.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
